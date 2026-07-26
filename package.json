@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/ebyfield/Personal-Website/issues"
   },
-  "homepage": "https://github.com/ebyfield/Personal-Website#readme"
+  "homepage": "https://github.com/ebyfield/Personal-Website#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
 }
