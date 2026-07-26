@@ -7,3 +7,6 @@ Website it under construction
 
 It can be accessed @ edwardbyfield.ca ;)
 
+This is a test
+
+
