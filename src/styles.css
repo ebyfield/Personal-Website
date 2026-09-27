@@ -871,3 +871,45 @@ h3 {
     font-size: 1rem;
   }
 }
+
+/* =========================
+   THE CORNER GATEWAY
+   ========================= */
+
+.corner-gateway {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.corner-gateway-copy {
+  padding: clamp(40px, 7vw, 70px);
+  background: #f3edff;
+  border: 1px solid #ded0f7;
+  border-radius: 24px;
+}
+
+.corner-gateway-copy .eyebrow {
+  color: #7656a8;
+}
+
+.corner-gateway-copy h2 {
+  max-width: 700px;
+  color: #3f3150;
+}
+
+.corner-gateway-copy > p:not(.eyebrow) {
+  max-width: 650px;
+  color: #665b72;
+}
+
+.corner-button {
+  margin-top: 18px;
+  background: #7656a8;
+  color: white;
+  border-color: #7656a8;
+}
+
+.corner-button:hover {
+  background: #654394;
+  border-color: #654394;
+}
