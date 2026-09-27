@@ -1,0 +1,77 @@
+---
+title: "Ideas & Essays"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ title }}</title>
+
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+  <header class="corner-header">
+    <a class="corner-brand" href="/blog/">
+      ✦ The Corner
+    </a>
+
+    <nav class="corner-nav">
+      <a href="/blog/">Home</a>
+      <a href="/blog/essays/">Essays</a>
+      <a href="/#projects">Projects</a>
+      <a href="/">Main Site</a>
+    </nav>
+  </header>
+
+  <main class="essays-page">
+
+    <section class="essays-intro">
+      <p class="corner-eyebrow">THE ARCHIVE</p>
+
+      <h1>Ideas & Essays</h1>
+
+      <p>
+        Longer thoughts on education, learning, systems,
+        and whatever else we're thinking about.
+      </p>
+    </section>
+
+    <section class="essays-list">
+
+     {% for post in collections.blogPosts reversed %}
+
+        {% if post.data.type == "Essay" %}
+            <article class="essay-row">
+
+            <div>
+                <p class="corner-post-type">
+                {{ post.data.category }}
+                </p>
+
+                <h2>
+                <a href="{{ post.url }}">
+                    {{ post.data.title }}
+                </a>
+                </h2>
+            </div>
+
+            <a class="essay-arrow" href="{{ post.url }}">
+                →
+            </a>
+
+            </article>
+        {% endif %}
+
+    {% endfor %}
+
+    </section>
+
+  </main>
+
+</body>
+</html>

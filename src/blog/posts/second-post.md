@@ -1,6 +1,9 @@
 ---
 title: "Whatever You Want"
 date: 2026-09-05
+type: "Blog"
+category: "Personal"
+description: "Some more experimentation."
 ---
 
 Write whatever you want here.

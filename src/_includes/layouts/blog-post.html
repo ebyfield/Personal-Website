@@ -4,21 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>{{ title }} | Blogging Corner</title>
+  <title>{{ title }} | The Corner</title>
 
   <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
 
-  <main>
-    <p><a href="/blog/">← Blogging Corner</a></p>
+  <header class="corner-header">
+    <a class="corner-brand" href="/blog/">
+      ✦ The Corner
+    </a>
+
+    <nav class="corner-nav">
+      <a href="/blog/">Home</a>
+      <a href="/blog/essays/">Essays</a>
+      <a href="/#projects">Projects</a>
+      <a href="/">Main Site</a>
+    </nav>
+  </header>
+
+  <main class="corner-article">
+
+    <a class="article-back" href="/blog/">
+      ← Back to The Corner
+    </a>
 
     <article>
-      <h1>{{ title }}</h1>
 
-      {{ content }}
+      <header class="article-header">
+
+        <div class="corner-post-labels">
+          <span class="corner-post-type">
+            {{ type }}
+          </span>
+
+          <span class="corner-post-category">
+            {{ category }}
+          </span>
+        </div>
+
+        <h1>{{ title }}</h1>
+
+        {% if description %}
+          <p class="article-description">
+            {{ description }}
+          </p>
+        {% endif %}
+
+        <time datetime="{{ date | date: '%Y-%m-%d', 'UTC' }}">
+          {{ date | date: "%B %d, %Y", "UTC" }}
+        </time>
+
+      </header>
+
+      <div class="article-content">
+        {{ content }}
+      </div>
+
     </article>
+
   </main>
 
 </body>

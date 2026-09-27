@@ -459,3 +459,415 @@ h3 {
     min-height: 88px;
   }
 }
+
+/* =========================
+   THE CORNER
+   ========================= */
+
+.corner-intro {
+  max-width: 900px;
+  margin: 70px auto 60px;
+  padding: 70px 40px;
+
+  text-align: center;
+
+  background: #f3edff;
+  border: 1px solid #ded0f7;
+  border-radius: 24px;
+}
+
+.corner-eyebrow {
+  margin-bottom: 12px;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+
+  color: #7656a8;
+}
+
+.corner-intro h1 {
+  margin: 0;
+
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+
+  color: #563982;
+}
+
+.corner-tagline {
+  max-width: 620px;
+  margin: 24px auto 0;
+
+  font-size: 1.15rem;
+  line-height: 1.7;
+
+  color: #665b72;
+}
+
+/* =========================
+   CORNER POST CARDS
+   ========================= */
+
+.corner-posts {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 20px 30px 80px;
+}
+
+.corner-section-label {
+  margin-bottom: 8px;
+
+  color: #7656a8;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.corner-posts h2 {
+  margin-bottom: 28px;
+
+  color: #3f3150;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.corner-post-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.corner-post-card {
+  padding: 28px;
+
+  background: #fffdfb;
+  border: 1px solid #ded0f7;
+  border-radius: 16px;
+
+  box-shadow: 0 8px 24px rgba(86, 57, 130, 0.08);
+}
+
+.corner-post-type {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 5px 10px;
+
+  background: #eadcff;
+  color: #654394;
+
+  border-radius: 6px;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.corner-post-card h3 {
+  margin-bottom: 24px;
+
+  font-size: 1.4rem;
+  line-height: 1.3;
+}
+
+.corner-post-card h3 a {
+  color: #34283f;
+  text-decoration: none;
+}
+
+.corner-read-more {
+  color: #7656a8;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.corner-post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(86, 57, 130, 0.13);
+}
+
+.corner-post-card,
+.corner-post-card:hover {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+@media (max-width: 700px) {
+  .corner-post-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .corner-posts {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* =========================
+   CORNER HEADER
+   ========================= */
+
+.corner-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px max(30px, calc((100% - 1120px) / 2));
+
+  background: #f3edff;
+  border-bottom: 1px solid #ded0f7;
+}
+
+.corner-brand {
+  color: #563982;
+
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.corner-nav {
+  display: flex;
+  gap: 26px;
+}
+
+.corner-nav a {
+  color: #665b72;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.corner-nav a:hover {
+  color: #7656a8;
+}
+
+@media (max-width: 600px) {
+  .corner-header {
+    padding: 16px 20px;
+  }
+
+  .corner-nav {
+    gap: 14px;
+  }
+
+  .corner-nav a {
+    font-size: 0.8rem;
+  }
+}
+
+/* =========================
+   ESSAYS PAGE
+   ========================= */
+
+.essays-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 80px 30px;
+}
+
+.essays-intro {
+  max-width: 760px;
+  margin-bottom: 55px;
+}
+
+.essays-intro h1 {
+  margin: 8px 0 18px;
+
+  color: #3f3150;
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  line-height: 1;
+}
+
+.essays-intro > p:last-child {
+  max-width: 650px;
+
+  color: #665b72;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+
+/* Individual essay rows */
+
+.essays-list {
+  border-top: 1px solid #ded0f7;
+}
+
+.essay-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  padding: 28px 8px;
+
+  border-bottom: 1px solid #ded0f7;
+}
+
+.essay-row h2 {
+  margin: 10px 0 0;
+
+  font-size: 1.45rem;
+  line-height: 1.3;
+}
+
+.essay-row h2 a {
+  color: #34283f;
+  text-decoration: none;
+}
+
+.essay-row h2 a:hover {
+  color: #7656a8;
+}
+
+.essay-arrow {
+  flex-shrink: 0;
+
+  color: #7656a8;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.essay-row:hover {
+  background: #faf7ff;
+}
+
+@media (max-width: 700px) {
+  .essays-page {
+    padding: 55px 20px;
+  }
+
+  .essay-row {
+    padding: 22px 4px;
+  }
+}
+
+/* =========================
+   CORNER ARTICLE
+   ========================= */
+
+.corner-article {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 65px 30px 100px;
+}
+
+.article-back {
+  display: inline-block;
+  margin-bottom: 45px;
+
+  color: #7656a8;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.article-back:hover {
+  text-decoration: underline;
+}
+
+
+/* Article heading */
+
+.article-header {
+  padding-bottom: 35px;
+  margin-bottom: 45px;
+
+  border-bottom: 1px solid #ded0f7;
+}
+
+.article-header h1 {
+  max-width: 780px;
+  margin: 18px 0;
+
+  color: #34283f;
+  font-size: clamp(2.8rem, 7vw, 4.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.article-description {
+  max-width: 680px;
+  margin-bottom: 20px;
+
+  color: #665b72;
+  font-size: 1.2rem;
+  line-height: 1.65;
+}
+
+.article-header time {
+  color: #887c91;
+  font-size: 0.9rem;
+}
+
+
+/* Actual essay */
+
+.article-content {
+  color: #342f38;
+
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+.article-content p {
+  margin-bottom: 1.5em;
+}
+
+.article-content h2 {
+  margin: 2.3em 0 0.7em;
+
+  color: #3f3150;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.article-content h3 {
+  margin: 2em 0 0.6em;
+
+  color: #563982;
+  font-size: 1.35rem;
+}
+
+.article-content ul,
+.article-content ol {
+  margin: 1.4em 0;
+  padding-left: 1.5em;
+}
+
+.article-content li {
+  margin-bottom: 0.6em;
+}
+
+.article-content a {
+  color: #7656a8;
+}
+
+.article-content blockquote {
+  margin: 2em 0;
+  padding: 18px 24px;
+
+  background: #f3edff;
+  border-left: 4px solid #9a78ce;
+  border-radius: 0 10px 10px 0;
+}
+
+
+/* Phones */
+
+@media (max-width: 700px) {
+  .corner-article {
+    padding: 45px 20px 75px;
+  }
+
+  .article-header h1 {
+    font-size: clamp(2.4rem, 12vw, 3.6rem);
+  }
+
+  .article-content {
+    font-size: 1rem;
+  }
+}

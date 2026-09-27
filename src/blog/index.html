@@ -1,5 +1,5 @@
 ---
-title: "Blogpost Corner"
+title: "The Corner"
 ---
 
 <!DOCTYPE html>
@@ -15,22 +15,70 @@ title: "Blogpost Corner"
 
 <body>
 
+<header class="corner-header">
+  <a class="corner-brand" href="/blog/">
+    ✦ The Corner
+  </a>
+
+  <nav class="corner-nav">
+    <a href="/blog/">Home</a>
+    <a href="/blog/essays/">Essays</a>
+    <a href="/#projects">Projects</a>
+    <a href="/">Main Site</a>
+  </nav>
+</header>
   <main>
-    <h1>BLogpost Corner</h1>
+    <section class="corner-intro">
+  <p class="corner-eyebrow">WELCOME TO</p>
 
-    <p>My little corner of the internet.</p>
+  <h1>The Corner</h1>
 
-    <h2>Posts</h2>
+  <p class="corner-tagline">
+    Ideas, experiments, and questions about how we teach,
+    learn, build, and understand the world.
+  </p>
+</section>
 
-    <ul>
+    <section class="corner-posts">
+    <p class="corner-section-label">FROM THE CORNER</p>
+    <h2>Latest ideas</h2>
+
+    <div class="corner-post-grid">
       {% for post in collections.blogPosts reversed %}
-        <li>
-          <a href="{{ post.url }}">{{ post.data.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+        <article class="corner-post-card">
 
-    <p><a href="/">← Back to the main site</a></p>
+          <div class="corner-post-labels">
+            <span class="corner-post-type">
+              {{ post.data.type }}
+            </span>
+
+            <span class="corner-post-category">
+              {{ post.data.category }}
+            </span>
+          </div>
+
+          <h3>
+            <a href="{{ post.url }}">{{ post.data.title }}</a>
+          </h3>
+
+          <p class="corner-post-description">
+            {{ post.data.description }}
+          </p>
+
+          <div class="corner-post-footer">
+            <time datetime="{{ post.date | date: '%Y-%m-%d', 'UTC' }}">
+              {{ post.date | date: "%b %d, %Y", "UTC" }}
+            </time>
+
+            <a class="corner-read-more" href="{{ post.url }}">
+              Read more →
+            </a>
+          </div>
+
+        </article>
+      {% endfor %}
+    </div>
+</section>
   </main>
 
 </body>
